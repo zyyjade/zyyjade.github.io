@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>只专注写作！GitHub Actions 自动部署博客 | 张小鱼的储物间</title><meta name="author" content="张小鱼"><meta name="copyright" content="张小鱼"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Hexo + GitHub Actions 实现在线写作，自动部署静态博客，把精力和时间花在写作这件事上。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="只专注写作！GitHub Actions 自动部署博客">
+<meta property="og:url" content="https://zyuyu.top/hexo-workflows/">
+<meta property="og:site_name" content="张小鱼的储物间">
+<meta property="og:description" content="Hexo + GitHub Actions 实现在线写作，自动部署静态博客，把精力和时间花在写作这件事上。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zyuyu.top/images/hexo-workflows/cover.png">
+<meta property="article:published_time" content="2022-11-09T09:15:38.000Z">
+<meta property="article:modified_time" content="2022-11-09T09:15:38.000Z">
+<meta property="article:author" content="张小鱼">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="GitHub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zyuyu.top/images/hexo-workflows/cover.png"><link rel="shortcut icon" href="https://s1.ax1x.com/2022/08/26/vRnaxe.jpg"><link rel="canonical" href="https://zyuyu.top/hexo-workflows/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification"/><meta name="baidu-site-verification"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":90,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '只专注写作！GitHub Actions 自动部署博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-09 17:15:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2022/08/26/vRnaxe.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fa fa-video-camera"></i><span> 片单</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-commenting"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/../images/hexo-workflows/cover.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">张小鱼的储物间</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fa fa-video-camera"></i><span> 片单</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-commenting"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">只专注写作！GitHub Actions 自动部署博客</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon fas fa-history"></i><span class="post-meta-label">更新于</span><time datetime="2022-11-09T09:15:38.000Z" title="更新于 2022-11-09 17:15:38">2022-11-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%BC%80%E5%8F%91/">开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="只专注写作！GitHub Actions 自动部署博客"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>在 GitHub Actions 的仓库中自动化、自定义和执行软件开发工作流程。 您可以发现、创建和共享操作以执行您喜欢的任何作业（包括 CI／CD），并将操作合并到完全自定义的工作流程中。</p>
+<p>—— GitHub Actions</p>
+</blockquote>
+<p>回想一下，当我们在本地写完一篇文章时，既要执行 Hexo 的命令，生成静态页面，还要执行 Git 的命令，推送静态页面到远程仓库，这无疑加重了我们写作的负担！😫😫😫 当你文章超过 100 篇时，再加上一堆依赖（插件），Hexo 生成页面要等待好几分钟，这就大大浪费了我们的时间。</p>
+<p>难道就有没有比较简单的方法，能让我们只专注于写作，只需要写完上传就行了呢？</p>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/actions">GitHub Actions</a> 是一个持续集成和持续交付的平台，可以自动化构建、测试和部署。通过它，你可以实现像在其它自媒体平台中那样，写作 + 上传即可，大大地节省了你的时间和精力。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-workflows/image-20221109185020857.png" alt="nice"></p>
+<h2 id="创建空仓库"><a href="#创建空仓库" class="headerlink" title="创建空仓库"></a>创建空仓库</h2><p>GitHub 仓库有两种类型，一种是公有仓库，另一种是私有仓库。如果你要创建可以被访问的网页，即 <code>GitHub Pages</code>，就需要将源代码放在公有仓库。而私有仓库可以进行权限控制，只有拥有权限的人才能访问并修改它，也就是说，别人是看不到的你的私有仓库的。</p>
+<p>利用 GitHub 仓库的特性，你可以在 GitHub 创建两个空仓库，一个私有仓库存放博客源码，如<code>owner/hexo</code> ，下面简称私库，一个公开仓库存放生成的 <code>public</code> 文件，如<code>owner/owner.github.io</code> ，下面简称公库。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-workflows/image-20221109183019506.png" alt="私库和公库"></p>
+<p>如此一来，你上传的文章的源文件既不会被人看到，还能够根据设置密钥对连接私库和公库，当私库中有内容更新的时候，GitHub Actions 将自动生成文件到公库，公库也会自动生成页面。</p>
+<h2 id="创建密钥对"><a href="#创建密钥对" class="headerlink" title="创建密钥对"></a>创建密钥对</h2><p>首先，在任意位置键入 <code>win+R</code> 调出运行，输入 <code>cmd</code>，并执行以下命令，获取 SSH 密钥对。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f github-deploy-key</span><br></pre></td></tr></table></figure>
+
+<p>此命令会生成 <code>github-deploy-key</code> 和 <code>github-deploy-key.pub</code>两个文件，一般位于 <code>C:\Users\用户名</code> 中。</p>
+<p>如果你不想它们存放于 C 盘的用户文件夹中，也可以在指定位置，右键单击 <code>Git Bash Here</code>，执行上述命令，获取 SSH 密钥对。但注意，请不要将密钥对存放于本地 Hexo 仓库中。</p>
+<p>接下来，在建立的私库中，打开「 Settings -&gt; Secrets -&gt; Actions -&gt; Actions secrets 」，点击 <code>New repository secret</code>，将  <code>github-deploy-key</code> 中的所有内容复制到 <code>Secret</code>中，<code>Name</code>填写 <code>ACTIONS_DEPLOY_KEY</code>。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-workflows/gYjfSjXNc1.png" alt="actions secrets"></p>
+<p>在建立的公库中，打开「 Settings -&gt; Secrets -&gt; Deploy keys 」，点击 <code>Add deploy key</code>，将  <code>github-deploy-key.pub</code> 中的所有内容复制到 <code>Secret</code>中，<code>Name</code>填写 <code>ACTIONS_DEPLOY_KEY</code>。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-workflows/IHqJRfd9i7.png" alt="deploy keys"></p>
+<h2 id="创建工作流"><a href="#创建工作流" class="headerlink" title="创建工作流"></a>创建工作流</h2><p>SSH 密钥对配置好后，在 Hexo 根目录中创建 <code>.github\workflows\deploy.yml</code>，将下面的内容复制到里面，并根据自己的情况修改其中的内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches: [main] # 在main分支push时触发部署</span><br><span class="line">    paths-ignore: # 以下文件的变更不触发部署</span><br><span class="line">      - README.md</span><br><span class="line">  workflow_dispatch:</span><br><span class="line"></span><br><span class="line">env: # 统一设置环境变量</span><br><span class="line">  GIT_USER: git</span><br><span class="line">  GIT_EMAIL: example@163.com</span><br><span class="line">  THEME_REPO: jerryc127/hexo-theme-butterfly # 你使用的主题仓库地址</span><br><span class="line">  THEME_BRANCH: master</span><br><span class="line">  DEPLOY_REPO: owner/owner.github.io # 你用来发布github pages的仓库地址</span><br><span class="line">  DEPLOY_BRANCH: main</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build: # job_id，其它job可以引用，比如两个job有先后顺序</span><br><span class="line">    name: Build Github Page # job名称</span><br><span class="line">    runs-on: ubuntu-latest # 构建使用的系统，支持 linux/mac/windows</span><br><span class="line">    timeout-minutes: 5 # job超时时间，超过后job会被停止运行</span><br><span class="line"></span><br><span class="line">    steps: # 一个job由多个 step 组成，本博的由7个step组成</span><br><span class="line">    # 1. Checkout hexo.git 中的内容</span><br><span class="line">      - name: Checkout Hexo repo</span><br><span class="line">      # 检出项目，如果不指定名称，默认使用运行Github Action 的仓库，即hexo.git</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line"></span><br><span class="line">    # 2. Checkout butterfly.git 主题内容到 theme目录</span><br><span class="line">      - name: Checkout Theme repo</span><br><span class="line">      # actions/checkout 就是Acton工具，实现checkout项目，每个action也是一个git仓库</span><br><span class="line">      # 可以直接通过 github.com/工具名称进行访问，即github.com/actions/checkout</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line">        with:</span><br><span class="line">          repository: $&#123;&#123; env.THEME_REPO &#125;&#125; # 要checkout的仓库地址</span><br><span class="line">          ref: $&#123;&#123; env.THEME_BRANCH &#125;&#125;</span><br><span class="line">          path: themes/butterfly # 要checkout到的路径</span><br><span class="line"></span><br><span class="line">    # 3. 安装 node.js 环境</span><br><span class="line">      - name: Use Node.js $&#123;&#123; matrix.node &#125;&#125;</span><br><span class="line">        uses: actions/setup-node@v2 # 使用actions/setup-node安装nodejs</span><br><span class="line">        with:</span><br><span class="line">          node-version: $&#123;&#123; matrix.node &#125;&#125;</span><br><span class="line"></span><br><span class="line">    # 4. 安装Hexo</span><br><span class="line">      - name: Install Hexo</span><br><span class="line">        run: | # 运行command命令</span><br><span class="line">          npm install -g hexo-cli</span><br><span class="line">          npm install</span><br><span class="line">          npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br><span class="line">          npm install hexo-generator-search --save</span><br><span class="line">          npm i --save hexo-wordcount</span><br><span class="line">          npm install hexo-butterfly-douban --save</span><br><span class="line">          npm install --save hexo-tag-aplayer</span><br><span class="line">          npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">    # 5. 使用Hexo生成静态页面</span><br><span class="line">      - name: Generate Blog</span><br><span class="line">        run: |</span><br><span class="line">          hexo generate</span><br><span class="line">          hexo douban</span><br><span class="line"></span><br><span class="line">    # 6. 发布静态页面到 owner.github.io</span><br><span class="line">      - name: Deploy Github Page</span><br><span class="line">        uses: peaceiris/actions-gh-pages@v3</span><br><span class="line">        with:</span><br><span class="line">          # 在 hexo.git 上设置的私钥</span><br><span class="line">          deploy_key: $&#123;&#123; secrets.ACTIONS_DEPLOY_KEY &#125;&#125; # ACTIONS_DEPLOY_KEY 不能修改</span><br><span class="line">          external_repository: $&#123;&#123; env.DEPLOY_REPO &#125;&#125; # Hexo.git 的仓库地址</span><br><span class="line">          publish_branch: $&#123;&#123; env.DEPLOY_BRANCH &#125;&#125;</span><br><span class="line">          publish_dir: ./public # 使用Hexo/hugo等生成静态页面的目录</span><br><span class="line">          user_name: $&#123;&#123; env.GIT_USER &#125;&#125;</span><br><span class="line">          user_email: $&#123;&#123; env.GIT_EMAIL &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>env</code> 环境变量是需要重点修改的部分，注意 <code>Checkout Theme repo</code> 中的 <code>path</code> 路径要记得修改为 Hexo 根目录中主题的位置，如 <code>themes/butterfly</code>。</p>
+<p>需要说明的是，由于 <code>node_modules</code> 依赖包过大，一般不会上传到 GitHub 仓库中，所以在 <code>Install Hexo</code> 部分，除了 <code>npm install -g hexo-cli</code> 和 <code>npm install</code> 这两个安装 Hexo 必备的 <code>npm</code> 外，其他的内容你需要结合自己安装的依赖（插件）的情况，填写对应依赖（插件）的安装命令。如果你有类似 <code>hexo douban</code> 这种还需要单独生成页面的插件，还需要在 <code>hexo generate</code> 后面添加相关的命令。</p>
+<p>接下来，你就可以通过 Git 将本地网站代码传输到 GitHub 仓库，这部分请阅读 <a href="https://zyuyu.top/hexo-buid/#%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2">超详细！纯小白 30 分钟 0 成本搭建私人博客</a>进行操作，你可以选择命令部署，也可以选择软件部署，接下来 <code>workflows</code> 就会自动完成所有的流程。</p>
+<p>需要注意的是，您无需在 Hexo 根目录执行 Hexo 的相关命令，这部分已经交给 <code>workflows</code> 完成了，你只需要将 Hexo 根目录的内容 <code>Push</code> 到私库即可。当你在异地时，还可以直接通过在私库中 <code>Add File</code> 上传写好的文章，就能自动生成页面了。</p>
+<h2 id="参考内容"><a href="#参考内容" class="headerlink" title="参考内容"></a>参考内容</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/actions">GitHub Actions 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/cn/repositories">GitHub 存储库官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.gagahappy.com/github-actions-workflows-hexo/">GitHub Actions Workflows 部署 Hexo</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://zyuyu.top">张小鱼</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zyuyu.top/hexo-workflows/">https://zyuyu.top/hexo-workflows/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zyuyu.top" target="_blank">张小鱼的储物间</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/GitHub/">GitHub</a></div><div class="post_share"><div class="social-share" data-image="/../images/hexo-workflows/cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/hugo-shortcode/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hugo-shortcode/cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hugo Shortcodes 语法速查手册</div></div></a></div><div class="next-post pull-right"><a href="/domain-name/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/domain-name/cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">域名太长？三步搞定 GitHub Pages 自定义域名</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/hexo-build/" title="超详细！纯小白 30 分钟 0 成本搭建私人博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-build/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-01</div><div class="title">超详细！纯小白 30 分钟 0 成本搭建私人博客</div></div></a></div><div><a href="/domain-name/" title="域名太长？三步搞定 GitHub Pages 自定义域名"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/domain-name/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-09</div><div class="title">域名太长？三步搞定 GitHub Pages 自定义域名</div></div></a></div><div><a href="/hexo-tag/" title="Hexo 标签插件语法速查手册"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-tag/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-04</div><div class="title">Hexo 标签插件语法速查手册</div></div></a></div><div><a href="/markdown/" title="超实用！写文章必备的 Markdown 速查手册"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/markdown/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-05</div><div class="title">超实用！写文章必备的 Markdown 速查手册</div></div></a></div><div><a href="/hugo-build/" title="简单易上手！非程序猿带你搭建免费个人博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hugo-build/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-06</div><div class="title">简单易上手！非程序猿带你搭建免费个人博客</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2022/08/26/vRnaxe.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">张小鱼</div><div class="author-info__description">🌈 Just Be Simple！<br>喜欢尝试新事物的张小鱼</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:hannah_zyy@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">😋😋😋 如果阅读过程中遇到了问题，请及时评论或者留言，看到了会在第一时间给出回复。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%A9%BA%E4%BB%93%E5%BA%93"><span class="toc-number">1.</span> <span class="toc-text">创建空仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5%E5%AF%B9"><span class="toc-number">2.</span> <span class="toc-text">创建密钥对</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-number">3.</span> <span class="toc-text">创建工作流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%86%85%E5%AE%B9"><span class="toc-number">4.</span> <span class="toc-text">参考内容</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/domain-name/" title="域名太长？三步搞定 GitHub Pages 自定义域名"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/domain-name/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="域名太长？三步搞定 GitHub Pages 自定义域名"/></a><div class="content"><a class="title" href="/domain-name/" title="域名太长？三步搞定 GitHub Pages 自定义域名">域名太长？三步搞定 GitHub Pages 自定义域名</a><time datetime="2022-11-09T15:45:58.000Z" title="发表于 2022-11-09 23:45:58">2022-11-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hexo-workflows/" title="只专注写作！GitHub Actions 自动部署博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-workflows/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="只专注写作！GitHub Actions 自动部署博客"/></a><div class="content"><a class="title" href="/hexo-workflows/" title="只专注写作！GitHub Actions 自动部署博客">只专注写作！GitHub Actions 自动部署博客</a><time datetime="2022-11-09T09:15:38.000Z" title="发表于 2022-11-09 17:15:38">2022-11-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hugo-shortcode/" title="Hugo Shortcodes 语法速查手册"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hugo-shortcode/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hugo Shortcodes 语法速查手册"/></a><div class="content"><a class="title" href="/hugo-shortcode/" title="Hugo Shortcodes 语法速查手册">Hugo Shortcodes 语法速查手册</a><time datetime="2022-11-06T01:32:18.000Z" title="发表于 2022-11-06 09:32:18">2022-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hugo-build/" title="简单易上手！非程序猿带你搭建免费个人博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hugo-build/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简单易上手！非程序猿带你搭建免费个人博客"/></a><div class="content"><a class="title" href="/hugo-build/" title="简单易上手！非程序猿带你搭建免费个人博客">简单易上手！非程序猿带你搭建免费个人博客</a><time datetime="2022-11-06T00:32:36.000Z" title="发表于 2022-11-06 08:32:36">2022-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/markdown/" title="超实用！写文章必备的 Markdown 速查手册"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/markdown/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="超实用！写文章必备的 Markdown 速查手册"/></a><div class="content"><a class="title" href="/markdown/" title="超实用！写文章必备的 Markdown 速查手册">超实用！写文章必备的 Markdown 速查手册</a><time datetime="2022-11-05T05:41:08.000Z" title="发表于 2022-11-05 13:41:08">2022-11-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/../images/hexo-workflows/cover.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 By 张小鱼</div><div class="footer_custom_text"><p><a target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://demo.jerryc.me/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;</br><a target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div><div id="rightside-config-show"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.zyuyu.top/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.zyuyu.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><div class="aplayer no-destroy" data-id="7360465359" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-lrctype="1" > </div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
