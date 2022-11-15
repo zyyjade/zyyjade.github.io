@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>好用到飞起！搭建博客效率翻倍的 VSCode 软件 | 张小鱼的储物间</title><meta name="author" content="张小鱼"><meta name="copyright" content="张小鱼"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="VSCode 是一款跨平台源代码编辑器，集成语法高亮、热键绑定、括号匹配和代码片段收集诸多功能。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="好用到飞起！搭建博客效率翻倍的 VSCode 软件">
+<meta property="og:url" content="https://zyuyu.top/vscode/">
+<meta property="og:site_name" content="张小鱼的储物间">
+<meta property="og:description" content="VSCode 是一款跨平台源代码编辑器，集成语法高亮、热键绑定、括号匹配和代码片段收集诸多功能。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zyuyu.top/images/vscode/cover.png">
+<meta property="article:published_time" content="2022-11-14T22:04:07.000Z">
+<meta property="article:modified_time" content="2022-11-14T22:04:07.000Z">
+<meta property="article:author" content="张小鱼">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Hugo">
+<meta property="article:tag" content="VSCode">
+<meta property="article:tag" content="软件">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zyuyu.top/images/vscode/cover.png"><link rel="shortcut icon" href="https://s1.ax1x.com/2022/08/26/vRnaxe.jpg"><link rel="canonical" href="https://zyuyu.top/vscode/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification"/><meta name="baidu-site-verification"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":90,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '好用到飞起！搭建博客效率翻倍的 VSCode 软件',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-15 06:04:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2022/08/26/vRnaxe.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fa fa-video-camera"></i><span> 片单</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-commenting"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/../images/vscode/cover.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">张小鱼的储物间</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 我的</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fa fa-book"></i><span> 书单</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fa fa-video-camera"></i><span> 片单</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-commenting"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">好用到飞起！搭建博客效率翻倍的 VSCode 软件</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon fas fa-history"></i><span class="post-meta-label">更新于</span><time datetime="2022-11-14T22:04:07.000Z" title="更新于 2022-11-15 06:04:07">2022-11-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Program/">Program</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="好用到飞起！搭建博客效率翻倍的 VSCode 软件"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>不知道你搭建静态博客时有没有遇到这些情况：</p>
+<ul>
+<li>一个接一个打开文件，多窗口作业。</li>
+<li>因为改错文件，反反复复重来了好几遍。</li>
+<li>打开多个窗口，电脑总是卡顿难以操作。</li>
+<li>代码总是出错，却不知道问题在哪。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/Wi7kPJ5LNV.png" alt="多窗口"></p>
+<p>这不仅影响了我们的操作效率，还影响了我们的心情，试想一下，电脑卡顿的时候，再加上一堆未整理的东西，谁的心情能够平静？有没有一个东西，能够集代码编辑 + 命令行 + 写作 + 代码字段检索 + 多窗口作业于一体，提高开发效率，减少不必要的出错呢？</p>
+<p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Visual Studio Code</a>（简称 VSCode）是由微软开发的一款源代码编辑器，支持 IntelliSense、调试、Git 和代码片断，可在 Windows、Linux 和 macOS 上下载使用，支持常见的脚本和编程语言，还可以通过安装扩展来获得更多语言和功能的支持。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/AY4WbYADZg.png" alt="VSCODE"></p>
+<p>只需要一个软件，你就可以完成搭建静态博客的全流程，从安装到主题配置，从写作到本地预览，从生成静态文件到部署到 GitHub 仓库，相当于 “ 一键 ” 操作！下面将介绍我在 VSCode 搭建静态博客的一些使用场景，以及当中使用的拓展。</p>
+<h2 id="语言环境"><a href="#语言环境" class="headerlink" title="语言环境"></a>语言环境</h2><p>安装好 VSCode 后，如果你已经拥有了代码项目，你可以在项目所在的根目录，右键单击选择 <code>通过code打开</code>或者在 VSCode 点击「 菜单栏 -&gt; 文件(F) -&gt; 打开文件夹 」，即可用 VSCode 打开整个项目文档。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/KfzawoPWoy.png" alt="通过Code打开"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/wJrm6z6W3w.png" alt="操作面板示例"></p>
+<p>原生的 VSCode 界面是纯英文的，如果你想要切换成中文界面，就按住 <code>Ctrl+Shift+X</code>或者点击「 菜单栏 -&gt; 查看(V) -&gt; 扩展 」，调出扩展界面，在应用商店搜索 <code>Chinese</code>，找到下列显示的中文语言包，安装后重启即可显示中文界面。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/image-20221115071324867.png" alt="中文语言包"></p>
+<p>另外，如果你想实现多窗口作业，只需要从活动侧边面板将对应的文档按住鼠标左键拖动到右边编辑区域即可。</p>
+<h2 id="命令终端"><a href="#命令终端" class="headerlink" title="命令终端"></a>命令终端</h2><p>无论是搭建静态博客，还是托管代码到 GitHub 仓库，<a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> 已经成为了必不可少的工具，那又该如何在 VSCode 中调用 Git 呢？</p>
+<p>在 VSCode 界面按住 <code>Ctrl+Shift+P</code> 或者点击「 菜单栏 -&gt; 查看(V) -&gt; 命令面板 」，调出命令界面，在窗口内键入 <code>open settings</code>，选择<code>首选项：打开用户设置（JSON）</code>，进入 <code>settings.json</code> 编辑界面，找到对应参数，并添加如下内容。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 请填入你的Git安装位置，注意是bin的位置 */</span></span><br><span class="line"><span class="attr">&quot;git.path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Program Files (x86)\\Git\\bin\\git.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;terminal.integrated.profiles.windows&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        ……</span><br><span class="line">        <span class="attr">&quot;Git Bash&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;source&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Git Bash&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="comment">/* 在这里新增一个git调用git bash，同样是bin的位置 */</span></span><br><span class="line">        <span class="attr">&quot;git&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;D:\\Program Files (x86)\\Git\\bin\\bash.exe&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span> </span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>接着，你就可以按住 <code>Ctrl+` </code>或者 <code>Ctrl+J</code> 或者点击「 菜单栏 -&gt; 终端(T) -&gt; 新建终端 」，调出终端界面，选择 <code>+</code> 下拉菜单，选择 <code>git</code>，即可在 VSCode 使用 Git Bash 了。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/Ky9fLsEtNN.png" alt="Bash"></p>
+<h2 id="代码编辑"><a href="#代码编辑" class="headerlink" title="代码编辑"></a>代码编辑</h2><p>静态博客最基本的代码语言有 HTML、CSS、JavaScript、JSON、Markdown 等，VSCode 不仅支持多种语言，还支持语法高亮显示和代码匹配等功能。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/image-20221115075345132.png" alt="示例"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/image-20221115074810125.png" alt="示例"></p>
+<p>你可以通过按住 <code>Ctrl+Shift+X</code> 或者点击「 菜单栏 -&gt; 查看(V) -&gt; 扩展 」，调出扩展界面，在应用商店搜索相应的语言名称，如 <code>html</code> ，然后下载相应语言的扩展即可。你还可以通过浏览器打开 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/VSCode">VSCode 扩展市场</a>，如此你可以借用浏览器的翻译功能，更加详细地了解扩展。</p>
+<p>同时，你还可以通过 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/languages/overview">VSCode Language 文档</a>获取每种代码语言推荐的扩展。我之所以不具体推荐某个扩展，是因为每个人的使用情况不一样，你最好结合自己的需求选择适合自己的扩展，安装了过多无用的拓展，对 VSCode 的使用也是一种负担。</p>
+<p>另外，如果你想要搜索某个代码在整个项目中的其他位置，你可以按住 <code>Ctrl+Shift+F</code> 或者点击「 菜单栏 -&gt; 查看(V) -&gt; 搜索 」，调出搜索界面，复制粘贴代码搜索即可。VSCode 既支持侧边栏代码的全项目搜索，也支持单个文件的 <code>Ctrl+F</code> 搜索。</p>
+<h2 id="写作预览"><a href="#写作预览" class="headerlink" title="写作预览"></a>写作预览</h2><p>如果你熟悉一些 Markdown 语法，你就能够很好地将 VSCode 打造成一个很好的写作环境，它不仅有对 Markdown 语法的键入提示，还提供实时动态同步预览功能。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/preview-scroll-sync.gif" alt="示例"></p>
+<p>在扩展应用商店搜索 <code>Markdown</code>，你将获得许多对它支持的扩展。比如，你可以通过 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a> 很好地实现 Markdown 的快捷输入；你可以通过 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=telesoho.vscode-markdown-paste-image">Markdown Paste</a> 很方便地粘贴图片资源；你还可以通过 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">Markdownlint</a> 实现对 Markdown 语法的检查。</p>
+<p>即使你使用 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/VSCode">Typora</a> 编辑 Markdown，它也能同步操作，即你在 Typora 编辑的一切内容，VSCode 也会同步显示，前提是你已经开启 Typora 自动保存或者在 Typora 已经保存内容，反之亦然。</p>
+<h2 id="托管代码"><a href="#托管代码" class="headerlink" title="托管代码"></a>托管代码</h2><p>无论如何，我都建议你在 VSCode 登录你的 GitHub 账户，方便同步信息，点击左侧活动侧边栏的账户按步骤操作即可。使用 VSCode，你可以很方便地将代码推送到 GitHub 仓库，只需要首次使用 Git 命令连接仓库即可，往后只需在源代码管理面板提交即可。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/6ePAjjZLEx.png" alt="源代码管理"></p>
+<p>按住 <code>Ctrl+` </code>或者 <code>Ctrl+J</code> 或者点击「 菜单栏 -&gt; 终端(T) -&gt; 新建终端 」，调出终端界面，选择 <code>+</code> 下拉菜单，如果你已配置 Git Bash，则选择 <code>git</code>；如果你尚未配置，则需要选择 <code>Command Prompt</code>（即 <code>cmd</code>），具体操作请阅读「 <a href="https://zyuyu.top/github-actions./">只专注写作！GitHub Actions 自动部署博客</a> 」，以下是初次连接 GitHub 仓库的执行命令。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cd命令仅限于已生成静态文件的情况</span></span><br><span class="line"><span class="built_in">cd</span> public</span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main </span><br><span class="line"></span><br><span class="line"><span class="comment"># 若是HTTPS地址，则执行这部分</span></span><br><span class="line">git remote add origin https://github.com/owner/repo.git</span><br><span class="line">git push -u origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 若是SSH地址，则执行这部分</span></span><br><span class="line">git remote add origin git@github.com:owner/repo.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>一旦你已经连接 GitHub 仓库的某一分支，源代码管理处就会显示你每次的变更，你只需要按下图操作即可实现一键推送至 GitHub 仓库的分支。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/4W0hFTCHzf.png" alt="源代码管理"></p>
+<h2 id="参考内容"><a href="#参考内容" class="headerlink" title="参考内容"></a>参考内容</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/">VSCode 使用文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/VSCode">VSCode 扩展市场</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://zyuyu.top">张小鱼</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zyuyu.top/vscode/">https://zyuyu.top/vscode/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zyuyu.top" target="_blank">张小鱼的储物间</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/Hugo/">Hugo</a><a class="post-meta__tags" href="/tags/VSCode/">VSCode</a><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6/">软件</a></div><div class="post_share"><div class="social-share" data-image="/../images/vscode/cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/comments/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/comments/cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">评论系统怎么选？这几个好看轻量易上手！</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/blog-build/" title="非程序猿的我，为什么要搭建自己的个人博客？"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/blog-build/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-12</div><div class="title">非程序猿的我，为什么要搭建自己的个人博客？</div></div></a></div><div><a href="/comments/" title="评论系统怎么选？这几个好看轻量易上手！"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/comments/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-13</div><div class="title">评论系统怎么选？这几个好看轻量易上手！</div></div></a></div><div><a href="/domain-name/" title="域名太长？三步搞定 GitHub Pages 自定义域名"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/domain-name/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-12</div><div class="title">域名太长？三步搞定 GitHub Pages 自定义域名</div></div></a></div><div><a href="/github-actions/" title="只专注写作！GitHub Actions 自动部署博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/github-actions/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-14</div><div class="title">只专注写作！GitHub Actions 自动部署博客</div></div></a></div><div><a href="/markdown/" title="超实用！写文章必备的 Markdown 速查手册"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/markdown/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-05</div><div class="title">超实用！写文章必备的 Markdown 速查手册</div></div></a></div><div><a href="/hexo-build/" title="适合小白！基于 Hexo + Butterfly 搭建个人博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-build/cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-11-12</div><div class="title">适合小白！基于 Hexo + Butterfly 搭建个人博客</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2022/08/26/vRnaxe.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">张小鱼</div><div class="author-info__description">🌈 Just Be Simple！<br>喜欢尝试新事物的张小鱼</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:hannah_zyy@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">😋😋😋 如果阅读过程中遇到了问题，请及时评论或者留言，看到了会在第一时间给出回复。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">语言环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%BB%88%E7%AB%AF"><span class="toc-number">2.</span> <span class="toc-text">命令终端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91"><span class="toc-number">3.</span> <span class="toc-text">代码编辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E4%BD%9C%E9%A2%84%E8%A7%88"><span class="toc-number">4.</span> <span class="toc-text">写作预览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%98%E7%AE%A1%E4%BB%A3%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">托管代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%86%85%E5%AE%B9"><span class="toc-number">6.</span> <span class="toc-text">参考内容</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/vscode/" title="好用到飞起！搭建博客效率翻倍的 VSCode 软件"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/vscode/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用到飞起！搭建博客效率翻倍的 VSCode 软件"/></a><div class="content"><a class="title" href="/vscode/" title="好用到飞起！搭建博客效率翻倍的 VSCode 软件">好用到飞起！搭建博客效率翻倍的 VSCode 软件</a><time datetime="2022-11-14T22:04:07.000Z" title="发表于 2022-11-15 06:04:07">2022-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/comments/" title="评论系统怎么选？这几个好看轻量易上手！"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/comments/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="评论系统怎么选？这几个好看轻量易上手！"/></a><div class="content"><a class="title" href="/comments/" title="评论系统怎么选？这几个好看轻量易上手！">评论系统怎么选？这几个好看轻量易上手！</a><time datetime="2022-11-12T16:54:20.000Z" title="发表于 2022-11-13 00:54:20">2022-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/domain-name/" title="域名太长？三步搞定 GitHub Pages 自定义域名"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/domain-name/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="域名太长？三步搞定 GitHub Pages 自定义域名"/></a><div class="content"><a class="title" href="/domain-name/" title="域名太长？三步搞定 GitHub Pages 自定义域名">域名太长？三步搞定 GitHub Pages 自定义域名</a><time datetime="2022-11-12T14:45:58.000Z" title="发表于 2022-11-12 22:45:58">2022-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hexo-build/" title="适合小白！基于 Hexo + Butterfly 搭建个人博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hexo-build/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="适合小白！基于 Hexo + Butterfly 搭建个人博客"/></a><div class="content"><a class="title" href="/hexo-build/" title="适合小白！基于 Hexo + Butterfly 搭建个人博客">适合小白！基于 Hexo + Butterfly 搭建个人博客</a><time datetime="2022-11-12T12:55:24.000Z" title="发表于 2022-11-12 20:55:24">2022-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/hugo-build/" title="简单易上手！基于 Hugo + DoIt 搭建个人博客"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../images/hugo-build/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简单易上手！基于 Hugo + DoIt 搭建个人博客"/></a><div class="content"><a class="title" href="/hugo-build/" title="简单易上手！基于 Hugo + DoIt 搭建个人博客">简单易上手！基于 Hugo + DoIt 搭建个人博客</a><time datetime="2022-11-12T12:32:36.000Z" title="发表于 2022-11-12 20:32:36">2022-11-12</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/../images/vscode/cover.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 By 张小鱼</div><div class="footer_custom_text"><p><a target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://demo.jerryc.me/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;</br><a target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div><div id="rightside-config-show"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.zyuyu.top/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.zyuyu.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><div class="aplayer no-destroy" data-id="7360465359" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-lrctype="1" > </div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

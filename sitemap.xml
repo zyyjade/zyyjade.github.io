@@ -4,7 +4,7 @@
   <url>
     <loc>https://zyuyu.top/link/</loc>
     
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://zyuyu.top/message/</loc>
     
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>https://zyuyu.top/tags/</loc>
     
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -30,6 +30,15 @@
   
   <url>
     <loc>https://zyuyu.top/categories/</loc>
+    
+    <lastmod>2022-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/vscode/</loc>
     
     <lastmod>2022-11-14</lastmod>
     
@@ -103,7 +112,7 @@
 
   <url>
     <loc>https://zyuyu.top/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,42 +120,56 @@
   
   <url>
     <loc>https://zyuyu.top/tags/Hexo/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zyuyu.top/tags/Hugo/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zyuyu.top/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zyuyu.top/tags/%E5%9F%9F%E5%90%8D/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zyuyu.top/tags/GitHub/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://zyuyu.top/tags/Markdown/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <lastmod>2022-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/tags/VSCode/</loc>
+    <lastmod>2022-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -154,8 +177,8 @@
 
   
   <url>
-    <loc>https://zyuyu.top/categories/%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2022-11-14</lastmod>
+    <loc>https://zyuyu.top/categories/Program/</loc>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

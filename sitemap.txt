@@ -2,6 +2,7 @@ https://zyuyu.top/link/
 https://zyuyu.top/message/
 https://zyuyu.top/tags/
 https://zyuyu.top/categories/
+https://zyuyu.top/vscode/
 https://zyuyu.top/github-actions/
 https://zyuyu.top/comments/
 https://zyuyu.top/domain-name/
@@ -16,4 +17,6 @@ https://zyuyu.top/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/
 https://zyuyu.top/tags/%E5%9F%9F%E5%90%8D/
 https://zyuyu.top/tags/GitHub/
 https://zyuyu.top/tags/Markdown/
-https://zyuyu.top/categories/%E5%BC%80%E5%8F%91/
+https://zyuyu.top/tags/VSCode/
+https://zyuyu.top/tags/%E8%BD%AF%E4%BB%B6/
+https://zyuyu.top/categories/Program/
