@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zyuyu.top/link/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zyuyu.top/message/</loc>
     
     <lastmod>2022-11-17</lastmod>
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://zyuyu.top/link/</loc>
+    <loc>https://zyuyu.top/categories/</loc>
     
     <lastmod>2022-11-17</lastmod>
     
@@ -29,7 +38,106 @@
   </url>
   
   <url>
-    <loc>https://zyuyu.top/categories/</loc>
+    <loc>https://zyuyu.top/9787121187803/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787121234064/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787121328480/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787508681467/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787115374769/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787111588702/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787121301780/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787508655659/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787121311543/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787111460022/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787111326403/</loc>
+    
+    <lastmod>2022-11-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/9787121275982/</loc>
     
     <lastmod>2022-11-17</lastmod>
     
@@ -252,6 +360,20 @@
   </url>
   
   <url>
+    <loc>https://zyuyu.top/tags/%E8%90%A5%E9%94%80/</loc>
+    <lastmod>2022-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zyuyu.top/tags/%E6%80%9D%E7%BB%B4/</loc>
+    <lastmod>2022-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zyuyu.top/tags/%E8%BF%90%E8%90%A5/</loc>
     <lastmod>2022-11-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -260,13 +382,6 @@
   
   <url>
     <loc>https://zyuyu.top/tags/%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2022-11-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zyuyu.top/tags/%E6%80%9D%E7%BB%B4/</loc>
     <lastmod>2022-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
