@@ -1,7 +1,8 @@
 https://zyuyu.top/link/
-https://zyuyu.top/message/
 https://zyuyu.top/tags/
+https://zyuyu.top/message/
 https://zyuyu.top/categories/
+https://zyuyu.top/knowledge-pyramid/
 https://zyuyu.top/markdown/
 https://zyuyu.top/vscode/
 https://zyuyu.top/github-actions/
@@ -39,6 +40,9 @@ https://zyuyu.top/tags/%E6%80%9D%E7%BB%B4/
 https://zyuyu.top/tags/%E8%AE%BE%E8%AE%A1/
 https://zyuyu.top/tags/%E5%BF%83%E7%90%86/
 https://zyuyu.top/tags/%E5%8D%9A%E5%AE%A2/
+https://zyuyu.top/tags/%E7%9F%A5%E8%AF%86%E8%BF%90%E7%94%A8/
 https://zyuyu.top/tags/%E8%BD%AF%E4%BB%B6/
+https://zyuyu.top/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/
 https://zyuyu.top/categories/Learn/
 https://zyuyu.top/categories/Program/
+https://zyuyu.top/categories/Work/
